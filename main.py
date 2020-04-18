@@ -1,6 +1,8 @@
 import vk_api, random
 from vk_api.longpoll import VkLongPoll, VkEventType
-from  current_info import getInfo
+import requests
+from bs4 import BeautifulSoup
+
 
 token = "26a1c4b052f5cbee679a7ce920131f6b694aaa567e48855bbace0822dfd791eb128e996ec19fb1fb26a2f"
 vk_session = vk_api.VkApi(token=token)
@@ -17,6 +19,35 @@ photos = ['photo-194380991_457239022', 'photo-194380991_457239023',
 'photo-194380991_457239034', 'photo-194380991_457239035',
 'photo-194380991_457239036']
 
+
+def getInfo():
+    site = requests.get("https://xn--80aesfpebagmfblc0a.xn--p1ai/")
+
+    if site.status_code != 200:
+        return "Извините, в данный момент информация недоступна."
+    html = site.text
+
+    soup = BeautifulSoup(html, features="html.parser")
+    # ill_count = soup.find('div', class_="cv-countdown__item-value _accent").text
+    # day_ill_count = soup.fint('div', class_="")
+
+    all = soup.find_all('div', class_="cv-countdown__item-value")
+    # all = soup.find_all('div', class_="cv-countdown__item-value _accent")
+
+    tests = all[0].text
+    ill = all[1].text
+    day_ill = all[2].text
+    heal = all[3].text
+    dead = all[4].text
+    info = "На данный момент в России по коронавирусу ситуация следующая:\n" \
+           "Проведено тестов: {}\n" \
+           "Случаев заболевания: {}\n" \
+           "Случаев заболевания за последние сутки: {}\n" \
+           "Выздоровевших: {}\n" \
+           "Умерших: {}.".format(tests, ill, day_ill, heal, dead)
+    return info
+
+
 def random_id():
     return random.randint(0, 10000000000000)
 
@@ -24,7 +55,7 @@ def random_id():
 while True:
     for event in longpoll.listen():
         if event.type == VkEventType.MESSAGE_NEW and event.to_me:
-            if event.text.lower() == 'начать':
+            if event.text.lower() in ['начать', 'привет']:
                 vk.messages.send(
                     user_id = event.user_id,
                     message = "Привет!",
