@@ -5,7 +5,7 @@
                 "action": {
                     "type": "text",
                     "payload": "{\"button\": \"1\"}",
-                    "label": "Ситуация в стране"
+                    "label": "Situation in country"
                 },
                 "color": "negative"
             }
@@ -15,7 +15,7 @@
                 "action": {
                     "type": "text",
                     "payload": "{\"button\": \"1\"}",
-                    "label": "Симптомы"
+                    "label": "Symptoms"
                 },
                 "color": "primary"
             },
@@ -23,7 +23,7 @@
                 "action": {
                     "type": "text",
                     "payload": "{\"button\": \"2\"}",
-                    "label": "Мифы"
+                    "label": "Myths"
                 },
                 "color": "primary"
             },
@@ -31,7 +31,7 @@
                 "action": {
                     "type": "text",
                     "payload": "{\"button\": \"2\"}",
-                    "label": "Мемы"
+                    "label": "Memes"
                 },
                 "color": "positive"
             }
