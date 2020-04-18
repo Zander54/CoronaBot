@@ -62,14 +62,14 @@ while True:
                     keyboard = open('keyboard.json', 'r', encoding='UTF-8').read(),
                     random_id = random_id()
                 )
-            elif event.text.lower() == 'ситуация в стране':
+            elif event.text.lower() == 'situation in country':
                 vk.messages.send(
                     user_id=event.user_id,
                     message=getInfo(),
                     keyboard=open('keyboard.json', 'r', encoding='UTF-8').read(),
                     random_id=random_id()
                 )
-            elif event.text.lower() == 'мемы':
+            elif event.text.lower() == 'memes':
                 vk.messages.send(
                     user_id=event.user_id,
                     message="",
@@ -77,7 +77,7 @@ while True:
                     random_id=random_id(),
                     attachment = random.choice(photos)
                 )
-            elif event.text.lower() == 'мифы':
+            elif event.text.lower() == 'myths':
                 vk.messages.send(
                     user_id=event.user_id,
                     message='''-новым коронавирусом нельзя заразиться через письма и посылки
@@ -89,7 +89,7 @@ while True:
                     keyboard=open('keyboard.json', 'r', encoding='UTF-8').read(),
                     random_id=random_id()
                 )
-            elif event.text.lower() == 'симптомы':
+            elif event.text.lower() == 'symptoms':
                 vk.messages.send(
                     user_id=event.user_id,
                     message=''' повышение температуры тела;
