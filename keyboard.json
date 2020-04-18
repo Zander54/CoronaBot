@@ -1,0 +1,41 @@
+{
+    "one_time": false,
+    "buttons": [
+        [   {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"1\"}",
+                    "label": "Situation in country"
+                },
+                "color": "negative"
+            }
+        ],
+      [
+        {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"1\"}",
+                    "label": "Symptoms"
+                },
+                "color": "primary"
+            },
+            {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"2\"}",
+                    "label": "Myths"
+                },
+                "color": "primary"
+            },
+                    {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"2\"}",
+                    "label": "Memes"
+                },
+                "color": "positive"
+            }
+      ]
+
+    ]
+}
