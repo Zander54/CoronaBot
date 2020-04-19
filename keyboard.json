@@ -1,0 +1,50 @@
+{
+    "one_time": false,
+    "buttons": [
+        [   {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"1\"}",
+                    "label": "Ситуация в стране"
+                },
+                "color": "negative"
+            }
+        ],
+        [   {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"1\"}",
+                    "label": "Ситуация в конкретном регионе"
+                },
+                "color": "negative"
+            }
+        ],
+      [
+            {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"2\"}",
+                    "label": "Факты"
+                },
+                "color": "primary"
+            },
+            {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"1\"}",
+                    "label": "Симптомы"
+                },
+                "color": "primary"
+            },
+            {
+                "action": {
+                    "type": "text",
+                    "payload": "{\"button\": \"2\"}",
+                    "label": "Мемы"
+                },
+                "color": "positive"
+            }
+      ]
+
+    ]
+}
