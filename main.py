@@ -4,8 +4,8 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 import requests
 from bs4 import BeautifulSoup
 
-
-token = "26a1c4b052f5cbee679a7ce920131f6b694aaa567e48855bbace0822dfd791eb128e996ec19fb1fb26a2f"
+# enter your token
+token = ""
 vk_session = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
